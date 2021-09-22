@@ -1,43 +1,50 @@
-function loadPage(){
-    const content = document.querySelector('#content');
-    const container = document.createElement('div');
-    container.id = 'container';
-    const logo = document.createElement('div');
-    logo.classList.add('logo');
-    logo.textContent = "Raula";
-    const navbar = document.createElement('div');
-    navbar.id = 'navbar';
-    const nav = document.createElement('nav');
-    navbar.appendChild(nav);
-    const links = document.createElement('ul');
-    const homeLink = document.createElement('li');
-    const homeNav = document.createElement('a');
-    homeNav.href = '#';
-    homeNav.textContent = 'Home';
-    homeLink.appendChild(homeNav);
-    const menuLink = document.createElement('li');
-    const menuNav = document.createElement('a');
-    menuNav.href = '#';
-    menuNav.textContent = 'Menu';
-    menuLink.appendChild(menuNav);
-    const locLink = document.createElement('li');
-    const locNav = document.createElement('a');
-    locNav.href = '#';
-    locNav.textContent = 'Locations';
-    locLink.appendChild(locNav);
-    const contactLink = document.createElement('li');
-    const contactNav = document.createElement('a');
-    contactNav.href = '#';
-    contactNav.textContent = 'Contact';
-    contactLink.appendChild(contactNav);
-    links.appendChild(homeLink);
-    links.appendChild(menuLink);
-    links.appendChild(locLink);
-    links.appendChild(contactLink);
-    nav.appendChild(links);
-    container.appendChild(logo);
-    container.appendChild(navbar);
-    content.appendChild(container);    
+import backImage from './backimage.jpg';
+function homePage(content){
+    const titleBacking = document.createElement('div')
+    titleBacking.id = 'title-back';
+    const mainLogo = document.createElement('div');
+    mainLogo.id = 'main-logo';
+    mainLogo.classList.add('title');
+    mainLogo.textContent = 'Raula';
+    titleBacking.appendChild(mainLogo);
+    const subLogo = document.createElement('div');
+    subLogo.id = 'subtitle';
+    subLogo.textContent = 'Anti-Bland Food';
+    titleBacking.appendChild(subLogo);
+    const images = document.createElement('div');
+    images.id = 'images';
+    const homepageImg = new Image();
+    homepageImg.src = backImage;
+    images.appendChild(homepageImg);
+    content.appendChild(images);
+    content.appendChild(titleBacking);
+    const aboutSection = document.createElement('div');
+    aboutSection.id = 'about-section';
+    const aboutTitle = document.createElement('div');
+    aboutTitle.id = 'about-title';
+    aboutTitle.textContent = 'Our Story';
+    aboutSection.appendChild(aboutTitle);
+    const aboutText = document.createElement('div');
+    aboutText.id = 'text-section';
+    aboutSection.appendChild(aboutText);
+    const mainAboutText = document.createElement('div');
+    mainAboutText.classList.add('main-text');
+    mainAboutText.textContent = "Inspired by both the American \
+    Sports Bar and the Punjabi Road Side Restaurants \
+    known as 'Dhabas', Raula encapsulates both chaos and flavour \
+    in our wide variety of dishes.\rOur food is unapologetically\
+    Indian with a modern American twist.\rFamily-owned since it's\
+    inception, Raula was created from the dedication, dreams, and\
+    diverse experiences of an Indo-Canadian Household.\rThe word \
+    'Raula' is of Punjabi origin and roughly translates to chaos,\
+    perfectly outlining the intense flavour profile of our \
+    cuisine.\r\rHere at Raula, we pride ourselves on inclusivity,\
+    cultural diversity and serving delicious food.";
+    aboutText.appendChild(mainAboutText);
+    content.appendChild(aboutSection);
+    const footer = document.createElement('div');
+    footer.id = 'footer';
+    content.appendChild(footer);
 }
 
-export {loadPage};
+export {homePage};

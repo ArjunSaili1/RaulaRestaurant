@@ -58,6 +58,7 @@ nav a {
     text-transform: uppercase;
     font-size: 30px;
     font-family: main;
+    cursor: pointer;
   }
 
 
@@ -120,7 +121,7 @@ img{
 #about-section{
     display: flex;
     justify-content: center;
-    height: 750px;
+    height: 700px;
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 2%;
@@ -137,7 +138,7 @@ img{
 }
 
 #footer{
-    height: 100px;
+    height: 80px;
 }
 
 #text-section{
@@ -150,7 +151,8 @@ img{
 
 .main-text{
     font-family: main;
-    font-size: 40px;
+    font-size: 41px;
     color:#635338;
     padding-top: 3%;
+    line-height: 2;
 }
