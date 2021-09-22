@@ -1,0 +1,43 @@
+function loadPage(){
+    const content = document.querySelector('#content');
+    const container = document.createElement('div');
+    container.id = 'container';
+    const logo = document.createElement('div');
+    logo.classList.add('logo');
+    logo.textContent = "Raula";
+    const navbar = document.createElement('div');
+    navbar.id = 'navbar';
+    const nav = document.createElement('nav');
+    navbar.appendChild(nav);
+    const links = document.createElement('ul');
+    const homeLink = document.createElement('li');
+    const homeNav = document.createElement('a');
+    homeNav.href = '#';
+    homeNav.textContent = 'Home';
+    homeLink.appendChild(homeNav);
+    const menuLink = document.createElement('li');
+    const menuNav = document.createElement('a');
+    menuNav.href = '#';
+    menuNav.textContent = 'Menu';
+    menuLink.appendChild(menuNav);
+    const locLink = document.createElement('li');
+    const locNav = document.createElement('a');
+    locNav.href = '#';
+    locNav.textContent = 'Locations';
+    locLink.appendChild(locNav);
+    const contactLink = document.createElement('li');
+    const contactNav = document.createElement('a');
+    contactNav.href = '#';
+    contactNav.textContent = 'Contact';
+    contactLink.appendChild(contactNav);
+    links.appendChild(homeLink);
+    links.appendChild(menuLink);
+    links.appendChild(locLink);
+    links.appendChild(contactLink);
+    nav.appendChild(links);
+    container.appendChild(logo);
+    container.appendChild(navbar);
+    content.appendChild(container);    
+}
+
+export {loadPage};

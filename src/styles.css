@@ -1,0 +1,156 @@
+@font-face {
+    font-family: main;
+    src: url(Doubletwo\ Studios\ -\ XXII\ DONT-MESS-WITH-VIKINGS\ HARDCORE.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 166, 0);
+    margin: 0;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.logo {
+    position: absolute;
+    z-index: 5;
+    font-family: main;
+    font-size: 60px;
+    color:#ff0077;
+    float: left;
+    padding: 14px  0;
+    padding-left: 5%;
+  }
+
+#navbar{
+    height: 100px;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    opacity: 85%;
+}
+
+nav{
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding-right: 300px;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 5.5%;
+    position: relative;
+}
+
+nav a {
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: main;
+  }
+
+
+img{
+    max-width:100%;
+    max-height:100%;
+    height: auto;
+    width: 100%;
+    filter: brightness(70%);
+}
+
+#images{
+    display: flex;
+    justify-content: center;
+    height: 750px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    z-index: 1;
+}
+
+.title{
+    color:#ff0077;
+    font-family: main;
+    
+}
+
+#title-back{
+    text-align: center;
+    position: absolute;
+    left: 6%;
+    top: 18%;
+    height: 220px;
+    width: 600px;
+    z-index: 100;
+    position: absolute;
+}
+
+
+#subtitle{
+    position: absolute;
+    font-size: 50px;
+    font-family: main;
+    color: #e26d00;
+    text-shadow:  2px 3px 0px #fff3d8;
+    left: 52%;
+    top: 88%;
+}
+
+#corner-logo{
+    font-size: 50px;
+}
+
+#main-logo{
+    text-shadow:  4px 5px 0px #fff3d8, 10px 9px 0px #ffe600, 15px 14px 0px #ffa600, 21px 19px 0px #eb5e34;
+    font-size: 200px;
+    z-index: 5;
+}
+
+#about-section{
+    display: flex;
+    justify-content: center;
+    height: 750px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    z-index: 2;
+    background-color: #fff3d8;
+}
+
+#about-title{
+    padding-top: 2%;
+    font-family: main;
+    font-size: 70px;
+    color: #ff0077;
+}
+
+#footer{
+    height: 100px;
+}
+
+#text-section{
+    position: absolute;
+    height: 500px;
+    width: 1500px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.main-text{
+    font-family: main;
+    font-size: 40px;
+    color:#635338;
+    padding-top: 3%;
+}
