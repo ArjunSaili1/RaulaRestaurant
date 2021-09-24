@@ -19,20 +19,24 @@ function createNav(){
     const homeNav = document.createElement('a');
     homeNav.addEventListener('click', ()=>{navigateHome();});
     homeNav.textContent = 'Home';
+    homeNav.id = 'home-nav';
     homeLink.appendChild(homeNav);
     const menuLink = document.createElement('li');
     const menuNav = document.createElement('a');
     menuNav.addEventListener('click', ()=>{navigateMenu();});
     menuNav.textContent = 'Menu';
+    menuNav.id = 'menu-nav';
     menuLink.appendChild(menuNav);
     const locLink = document.createElement('li');
     const locNav = document.createElement('a');
-    locNav.addEventListener('click', ()=>{navigateLocations});
+    locNav.addEventListener('click', (e)=>{navigateLocations(e)});
+    locNav.id = 'loc-nav'
     locNav.textContent = 'Locations';
     locLink.appendChild(locNav);
     const contactLink = document.createElement('li');
     const contactNav = document.createElement('a');
-    contactNav.addEventListener('click', ()=>{navigateContact});
+    contactNav.id = 'contact-nav';
+    contactNav.addEventListener('click', ()=>{navigateContact();});
     contactNav.textContent = 'Contact';
     contactLink.appendChild(contactNav);
     links.appendChild(homeLink);
@@ -53,24 +57,28 @@ function navigateHome(){
     clearPage();
     createNav();
     homePage(content);
+    document.querySelector('#home-nav').style.color = '#e77a59';
 }
 
 function navigateMenu(){
     clearPage();
     createNav();
     menuPage(content);
+    document.querySelector('#menu-nav').style.color = '#e77a59';
 }
 
-function navigateLocations(){
+function navigateLocations(e){
     clearPage();
     createNav();
     locationPage(content);
+    document.querySelector('#loc-nav').style.color = '#e77a59';
 }
 
 function navigateContact(){
     clearPage();
     createNav();
     contactPage(content);
+    document.querySelector('#contact-nav').style.color = '#e77a59';
 }
 
 

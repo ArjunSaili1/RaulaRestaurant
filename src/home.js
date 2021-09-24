@@ -21,7 +21,6 @@ function homePage(content){
     content.appendChild(images);
     content.appendChild(titleBacking);
     const aboutSection = document.createElement('div');
-    aboutSection.id = 'about-section';
     aboutSection.classList.add('backing');
     const aboutTitle = document.createElement('div');
     aboutTitle.id = 'about-title';
@@ -46,7 +45,7 @@ function homePage(content){
     aboutText.appendChild(mainAboutText);
     content.appendChild(aboutSection);
     const footer = document.createElement('div');
-    footer.id = 'footer';
+    footer.classList.add('footer');
     content.appendChild(footer);
 }
 
