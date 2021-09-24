@@ -1,4 +1,5 @@
-import backImage from './backimage.jpg';
+import fitty from 'fitty';
+import backImage from './assets/images/backimage.jpg';
 function homePage(content){
     const titleBacking = document.createElement('div')
     titleBacking.id = 'title-back';
@@ -15,11 +16,13 @@ function homePage(content){
     images.id = 'images';
     const homepageImg = new Image();
     homepageImg.src = backImage;
+    homepageImg.id = 'homepage-img'
     images.appendChild(homepageImg);
     content.appendChild(images);
     content.appendChild(titleBacking);
     const aboutSection = document.createElement('div');
     aboutSection.id = 'about-section';
+    aboutSection.classList.add('backing');
     const aboutTitle = document.createElement('div');
     aboutTitle.id = 'about-title';
     aboutTitle.textContent = 'Our Story';

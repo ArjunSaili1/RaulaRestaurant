@@ -1,5 +1,6 @@
 import "./styles.css"
 import { homePage } from "./home";
+import { menuPage } from "./menu";
 const content = document.querySelector('#content');
 function createNav(){
     const container = document.createElement('div');
@@ -14,13 +15,12 @@ function createNav(){
     const links = document.createElement('ul');
     const homeLink = document.createElement('li');
     const homeNav = document.createElement('a');
-    homeNav.addEventListener('click', ()=>{
-        navigateHome();
-    })
+    homeNav.addEventListener('click', ()=>{navigateHome();});
     homeNav.textContent = 'Home';
     homeLink.appendChild(homeNav);
     const menuLink = document.createElement('li');
     const menuNav = document.createElement('a');
+    menuNav.addEventListener('click', ()=>{navigateMenu();});
     menuNav.textContent = 'Menu';
     menuLink.appendChild(menuNav);
     const locLink = document.createElement('li');
@@ -46,10 +46,16 @@ function clearPage(){
 }
 
 function navigateHome(){
-    alert('created');
     clearPage();
     createNav();
     homePage(content);
+}
+
+function navigateMenu(){
+    console.log('abc');
+    clearPage();
+    createNav();
+    menuPage(content);
 }
 
 navigateHome();
