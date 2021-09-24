@@ -34,6 +34,7 @@ body{
 }
 
 nav{
+    padding-top: 12px;
     float: right;
     padding-right: 8%;
 }

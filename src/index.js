@@ -2,7 +2,6 @@ import "./styles.css"
 import { homePage } from "./home";
 import { menuPage } from "./menu";
 import { locationPage } from "./locations";
-import { contactPage } from "./contact";
 const content = document.querySelector('#content');
 function createNav(){
     const container = document.createElement('div');
@@ -33,16 +32,9 @@ function createNav(){
     locNav.id = 'loc-nav'
     locNav.textContent = 'Locations';
     locLink.appendChild(locNav);
-    const contactLink = document.createElement('li');
-    const contactNav = document.createElement('a');
-    contactNav.id = 'contact-nav';
-    contactNav.addEventListener('click', ()=>{navigateContact();});
-    contactNav.textContent = 'Contact';
-    contactLink.appendChild(contactNav);
     links.appendChild(homeLink);
     links.appendChild(menuLink);
     links.appendChild(locLink);
-    links.appendChild(contactLink);
     nav.appendChild(links);
     container.appendChild(logo);
     container.appendChild(navbar);
@@ -73,13 +65,5 @@ function navigateLocations(e){
     locationPage(content);
     document.querySelector('#loc-nav').style.color = '#e77a59';
 }
-
-function navigateContact(){
-    clearPage();
-    createNav();
-    contactPage(content);
-    document.querySelector('#contact-nav').style.color = '#e77a59';
-}
-
 
 navigateHome();
