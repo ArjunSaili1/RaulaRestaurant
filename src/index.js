@@ -1,6 +1,8 @@
 import "./styles.css"
 import { homePage } from "./home";
 import { menuPage } from "./menu";
+import { locationPage } from "./locations";
+import { contactPage } from "./contact";
 const content = document.querySelector('#content');
 function createNav(){
     const container = document.createElement('div');
@@ -25,10 +27,12 @@ function createNav(){
     menuLink.appendChild(menuNav);
     const locLink = document.createElement('li');
     const locNav = document.createElement('a');
+    locNav.addEventListener('click', ()=>{navigateLocations});
     locNav.textContent = 'Locations';
     locLink.appendChild(locNav);
     const contactLink = document.createElement('li');
     const contactNav = document.createElement('a');
+    contactNav.addEventListener('click', ()=>{navigateContact});
     contactNav.textContent = 'Contact';
     contactLink.appendChild(contactNav);
     links.appendChild(homeLink);
@@ -52,10 +56,22 @@ function navigateHome(){
 }
 
 function navigateMenu(){
-    console.log('abc');
     clearPage();
     createNav();
     menuPage(content);
 }
+
+function navigateLocations(){
+    clearPage();
+    createNav();
+    locationPage(content);
+}
+
+function navigateContact(){
+    clearPage();
+    createNav();
+    contactPage(content);
+}
+
 
 navigateHome();
