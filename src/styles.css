@@ -281,7 +281,7 @@ nav a {
 
 #location-title{
     font-family: 'main';
-    font-size: 7rem;
+    font-size: 6.5vw;
     margin-top: auto;
 }
 
@@ -292,9 +292,9 @@ nav a {
 }
 
 #location-line-one{
-    font-size: 4em;
+    font-size: 4vw;
 }
 
 #location-line-two{
-    font-size: 3em;
+    font-size: 2.8vw;
 }
